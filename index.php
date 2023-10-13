@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->query($sql) === TRUE) {
         echo '<div class="alert alert-success" role="alert">Your account has been created successfully.</div>';
         // Redirect to index.php
-        header('Location: index.php');
+        header('Location: home.php');
         exit;
     } else {
         echo '<div class="alert alert-danger" role="alert">Error: ' . $sql . '<br>' . $conn->error . '</div>';
@@ -69,6 +69,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            <p class="text-center mt-3">
+                <a href="#">Create Account</a> | <a href="#">Forgot Password</a>
+            </p>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
